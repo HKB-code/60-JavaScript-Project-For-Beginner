@@ -25,7 +25,7 @@ To get started with these projects, you'll need to have a basic understanding of
 
    ```bash
    git clone https://github.com/HKB-code/60-JavaScript-Project-For-Beginner.git
-   cd 45-beginner-javascript-projects
+   cd 60-JavaScript-Project-Beginner
    ```
 
 2. Open the project folder of your choice:
