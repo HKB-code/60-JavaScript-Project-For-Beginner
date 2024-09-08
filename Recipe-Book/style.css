@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fefefe;
+  font-family: sans-serif;
+}
+header {
+  background-color: rgba(238, 213, 124, 0.689);
+  padding: 10px 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+h1 {
+  padding: 5px 15px;
+  font-weight: bold;
+  font-size: 35px;
+  font-style: italic;
+  color: #fff;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#recipe-list {
+  list-style: none;
+}
+.recipe-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  box-shadow: 0 5px 5px rgba(63, 63, 63, 0.8);
+  padding-right: 15px;
+  overflow: hidden;
+}
+.recipe-item-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+.recipe-item h2 {
+  font-size: 20px;
+  padding: 10px;
+  min-width: 30px;
+  margin-right: 10px;
+}
+.recipe-item p {
+  font-size: 16px;
+  padding: 5px;
+  color: #777;
+}
+/* If paragraph is long add this class */
+.short-para {
+  font-size: 14px !important;
+  padding: 5px !important;
+  color: #777;
+}
+/* a:lvha */
+.recipe-item a:link,
+a:visited {
+  color: #ffffff;
+  background-color: rgba(244, 173, 67, 0.89);
+  padding: 10px;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.4s ease;
+}
+.recipe-item a:hover {
+  filter: brightness(50%);
+}
+.recipe-item a:active {
+  transform: translate(0, 0.4rem);
+}
+
+@media screen and (max-width: 650px) {
+  header {
+    padding: 5px 15px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  h1 {
+    padding: 5px;
+    font-weight: bold;
+    font-size: 25px;
+    font-style: italic;
+    color: #fff;
+  }
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .recipe-item {
+    display: flex;
+    flex-direction: column;
+    padding-right: 0;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    box-shadow: 0 3px 3px rgba(63, 63, 63, 0.8);
+  }
+  .recipe-item-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .recipe-item h2 {
+    font-size: 18px;
+    padding: 5px;
+    min-width: 15px;
+  }
+  .recipe-item p {
+    font-size: 15px;
+    padding: 8px;
+    color: #777;
+  }
+  .recipe-item a {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
