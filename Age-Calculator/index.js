@@ -2,15 +2,34 @@ const birthdayEl = document.getElementById("birthday");
 const btnEl = document.querySelector(".btn");
 const overViewEl = document.querySelector(".overview");
 const resultEl = document.querySelector(".result");
+
+const loaderEl = document.querySelector(".loader");
+
+function hideLoader() {
+  loaderEl.hidden = true;
+  resultEl.hidden = false;
+}
+hideLoader();
+
+function showLoader() {
+  loaderEl.hidden = false;
+  resultEl.hidden = true;
+}
+
 btnEl.addEventListener("click", () => {
+  showLoader();
   const birthdayValue = birthdayEl.value;
   if (birthdayValue === "") {
     overViewEl.classList.remove("hidden");
     setTimeout(() => {
+      hideLoader();
       alert("Please Enter your DOB\nClick anywhere for enter DOB....🤣");
     }, 500);
   } else {
     const result = calcAge(birthdayValue);
+    setTimeout(() => {
+      hideLoader();
+    }, 2000);
     resultEl.textContent = `You're ${result.age} ${
       result.age > 1 ? "years" : "year"
     } & ${
